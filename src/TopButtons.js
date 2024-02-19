@@ -24,24 +24,20 @@ const TopButtons = () => {
     },
     {
       id: 6,
-      name: "Brasilia",
+      name: "London",
     },
     {
       id: 7,
       name: "Sydney",
     },
-    {
-      id: 8,
-      name: "London",
-    },
   ];
 
   return (
-    <div className="flex justify-between items-center px-5 mt-4">
+    <div className="flex justify-between items-center px-5 mt-4 w-11/12">
       {cities.map((city) => (
         <button
           key={city.id}
-          className="text-white font-bold text-xl cursor-pointer hover:underline underline-offset-4 transition-all ease-in-out"
+          className="text-white font-bold text-xl cursor-pointer active:scale-110 underline-offset-4 transition-all ease-in-out"
         >
           {city.name}
         </button>
