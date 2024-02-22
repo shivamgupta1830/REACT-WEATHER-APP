@@ -1,10 +1,14 @@
 import React from "react";
 
-const TopButtons = () => {
+const TopButtons = ({ setQuery }) => {
+  const topButtonHandler = (e) => {
+    console.log(e.currentTarget.value);
+    setQuery(e.currentTarget.value);
+  };
   const cities = [
     {
       id: 1,
-      name: "New Delhi",
+      name: "Mumbai",
     },
     {
       id: 2,
@@ -20,7 +24,7 @@ const TopButtons = () => {
     },
     {
       id: 5,
-      name: "Newyork",
+      name: "New York",
     },
     {
       id: 6,
@@ -36,8 +40,10 @@ const TopButtons = () => {
     <div className="flex justify-between items-center px-5 mt-4 w-11/12">
       {cities.map((city) => (
         <button
+          onClick={topButtonHandler}
           key={city.id}
           className="text-white font-bold text-xl cursor-pointer active:scale-110 underline-offset-4 transition-all ease-in-out"
+          value={city.name}
         >
           {city.name}
         </button>

@@ -1,9 +1,13 @@
 import React from "react";
 
-const CityName = () => {
+const CityName = (props) => {
+  const { name, country } = {
+    ...props.weather,
+  };
+
   return (
     <div className="text-xl font-semibold text-white text-center">
-      New Delhi, IN
+      {name}, {country}
     </div>
   );
 };
