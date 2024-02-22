@@ -34,7 +34,7 @@ function App() {
 
       {weather ? (
         <div className="text-center mt-2 flex flex-col justify-between items-center gap-6">
-          <DateTime />
+          <DateTime weather={weather} />
           <CityName weather={weather} />
           <WeatherDetails weather={weather} />
           <WeatherDetails2 weather={weather} />{" "}

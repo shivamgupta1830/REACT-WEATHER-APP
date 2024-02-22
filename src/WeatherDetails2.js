@@ -7,7 +7,7 @@ import {
 } from "@iconscout/react-unicons";
 
 const WeatherDetails2 = (props) => {
-  const { sunset, sunrise, temp_min, temp_max } = {
+  const { sunset, sunrise, temp_min, temp_max, formattedSunTime } = {
     ...props.weather,
   };
 
@@ -15,14 +15,14 @@ const WeatherDetails2 = (props) => {
     {
       id: 1,
       title: "Sunrise",
-      data: sunrise,
+      data: formattedSunTime(sunrise),
       icon: <UilSun />,
       unit: "",
     },
     {
       id: 2,
       title: "Sunset",
-      data: sunset,
+      data: formattedSunTime(sunset),
       icon: <UilSunset />,
       unit: "",
     },

@@ -2,7 +2,6 @@ import React from "react";
 
 const TopButtons = ({ setQuery }) => {
   const topButtonHandler = (e) => {
-    console.log(e.currentTarget.value);
     setQuery(e.currentTarget.value);
   };
   const cities = [
